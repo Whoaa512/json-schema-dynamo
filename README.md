@@ -1,6 +1,7 @@
-#json-schema-dynamo#
-Just an easier way to transform objects into DynamoDB items
+# json-schema-dynamo
+> Just an easier way to transform objects into DynamoDB items
 
+```javascript
     var transformers = require('json-schema-dynamo')
 
     var schema = {
@@ -88,6 +89,7 @@ Just an easier way to transform objects into DynamoDB items
       }
     */
 
+```
 
 Currently it supports: string, number, integer, boolean, array of strings, array of numbers, and lists
 
