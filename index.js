@@ -1,5 +1,5 @@
 var Validator = require('jsonschema').Validator
-var _ = require('lodash')
+var mapValues = require('lodash.mapvalues')
 
 var toModel = {
   S: function (value) {
@@ -31,7 +31,7 @@ var toModel = {
     })
   },
   M: function (value, schema) {
-    return _.mapValues(value, function (value, key) {
+    return mapValues(value, function (value, key) {
       var type = Object.keys(value)[0]
       var itemSchema = schema && schema.properties && schema.properties[key]
       return toModel[type](value[type], itemSchema)
